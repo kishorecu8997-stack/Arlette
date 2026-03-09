@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+
+:root {
+  --font-family-base: "Outfit", sans-serif;
+  --text-paragraph-size: clamp(1rem, 1.1vw, 1.3125rem);
+  --text-paragraph-line-height: 1.54;
+  --text-paragraph-weight: 400;
+  --text-heading-size: clamp(1.9rem, 2.7vw, 2.6875rem);
+  --text-heading-line-height: 1;
+  --text-heading-weight: 500;
+}
+
+html,
+body,
+#root {
+  font-family: var(--font-family-base);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-base);
+  font-weight: var(--text-heading-weight);
+  letter-spacing: 0;
+}
+
+h1 {
+  font-size: calc(var(--text-heading-size) * 1.2);
+  line-height: 1.05;
+}
+
+h2 {
+  font-size: calc(var(--text-heading-size) * 1.08);
+  line-height: 1.06;
+}
+
+h3 {
+  font-size: var(--text-heading-size);
+  line-height: var(--text-heading-line-height);
+}
+
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+}
+
+p {
+  font-family: var(--font-family-base);
+  font-size: var(--text-paragraph-size);
+  line-height: var(--text-paragraph-line-height);
+  font-weight: var(--text-paragraph-weight);
+  letter-spacing: 0;
+}
+
+.text-style-heading {
+  font-family: var(--font-family-base);
+  font-size: var(--text-heading-size);
+  line-height: var(--text-heading-line-height);
+  font-weight: var(--text-heading-weight);
+  letter-spacing: 0;
+  text-transform: capitalize;
+}
+
+.text-style-paragraph {
+  font-family: var(--font-family-base);
+  font-size: var(--text-paragraph-size);
+  line-height: var(--text-paragraph-line-height);
+  font-weight: var(--text-paragraph-weight);
+  letter-spacing: 0;
+}
