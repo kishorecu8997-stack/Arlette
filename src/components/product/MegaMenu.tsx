@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import type { Product } from "../../types/product";
-import industrialWorkersImage from "../../assets/i4.jpg";
+import industrialWorkersImage from "../../assets/infra4.png";
 import "./MegaMenu.css";
 
 type MegaMenuProps = {
@@ -44,9 +44,9 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
   return (
     <>
       {/* Overlay */}
-      <div className="mega-menu-overlay" style={{ display: isHidden ? 'none' : '' }}></div>
+      <div className="mega-menu-overlay" style={{ display: isHidden ? 'none' : undefined }}></div>
 
-      <div className="mega-menu" style={{ display: isHidden ? 'none' : '' }}>
+      <div className="mega-menu" style={{ display: isHidden ? 'none' : undefined }}>
         <div className="mega-menu-content">
           {/* LEFT */}
           <div className="mega-menu-left">

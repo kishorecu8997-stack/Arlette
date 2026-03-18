@@ -2,10 +2,10 @@ import type { Product } from '../types/product'
 
 
 //product 1
-import p1 from"../assets/Rectangle 60.png";
-import p2 from"../assets/Rectangle 61.png"; 
-import p3 from"../assets/Rectangle 62.png"; 
-import p4 from"../assets/Rectangle 63.png";
+import p1 from "../assets/Rectangle 60.png";
+import p2 from "../assets/Rectangle 61.png"; 
+import p3 from "../assets/Rectangle 62.png"; 
+import p4 from "../assets/Rectangle 63.png";
 
 
 //manifacture
@@ -17,15 +17,15 @@ import p4 from"../assets/Rectangle 63.png";
 
 
 import m1 from "../assets/Manufacturing1.jpg";
-import m2 from"../assets/Manufacturing2.jfif";
-import m3 from"../assets/Manufacturing3.png";
-import m4 from"../assets/Manufacturing4.jfif";
+import m2 from "../assets/Manufacturing2.jfif";
+import m3 from "../assets/Manufacturing3.png";
+import m4 from "../assets/Manufacturing4.jfif";
 
 //infra
 import i1 from "../assets/i1.png";
 import i2 from "../assets/i2.png";
-import i3 from"../assets/infra3.jfif"
-import i4 from"../assets/infra4.png";          
+import i3 from "../assets/infra3.jfif";
+import i4 from "../assets/infra4.png";          
 
    
 

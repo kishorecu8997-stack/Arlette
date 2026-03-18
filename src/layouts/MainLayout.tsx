@@ -1,4 +1,4 @@
-import { useEffect, useState, Children, cloneElement } from "react";
+import { useEffect, useState,} from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
