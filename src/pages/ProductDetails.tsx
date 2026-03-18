@@ -1,7 +1,8 @@
 import { useMemo, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import certificate from "../assets/certificatelogo.png";
 
-import {products} from "../data/products"
+import { products } from "../data/products";
 import "./ProductDetails.css";
 
 function ProductDetails() {
@@ -10,13 +11,15 @@ function ProductDetails() {
 
   const product = useMemo(
     () => products.find((item) => item.slug === slug),
-    [slug]
+    [slug],
   );
 
   useEffect(() => {
     if (product && product.images.length > 1) {
       const interval = setInterval(() => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % product.images.length);
+        setCurrentImageIndex(
+          (prevIndex) => (prevIndex + 1) % product.images.length,
+        );
       }, 4000);
       return () => clearInterval(interval);
     }
@@ -32,24 +35,39 @@ function ProductDetails() {
 
   const childImages = [...product.images];
   const mainImage = childImages.splice(currentImageIndex, 1)[0];
-  if(childImages.length > 3) {
+  if (childImages.length > 3) {
     childImages.length = 3;
   }
 
+  const certifications = [
+    {
+      number: "ISO999112200",
+      image: certificate,
+    },
+    {
+      number: "ISO999112200",
+      image: certificate,
+    },
+    {
+      number: "ISO999112200",
+      image: certificate,
+    },
+    {
+      number: "ISO999112200",
+      image: certificate,
+    },
+  ];
 
   return (
     <section className="product-details">
       <div className="product-details__container">
-        
         <p className="product-details__breadcrumb">
           / Products / {product.name}
         </p>
 
         <div className="product-details__top">
-
           {/* LEFT IMAGE SECTION */}
           <div className="product-details__gallery">
-
             <img
               className="product-details__main-image"
               src={mainImage}
@@ -58,15 +76,20 @@ function ProductDetails() {
 
             <div className="product-details__thumbs">
               {childImages.map((image, index) => (
-                <img key={index} src={image} alt="" onClick={() => handleThumbClick(product.images.indexOf(image))} />
+                <img
+                  key={index}
+                  src={image}
+                  alt=""
+                  onClick={() =>
+                    handleThumbClick(product.images.indexOf(image))
+                  }
+                />
               ))}
             </div>
-
           </div>
 
           {/* RIGHT CONTENT */}
           <div className="product-details__info">
-
             <p className="product-details__series hover-effect">
               Series: Art Steel 0023
             </p>
@@ -82,13 +105,15 @@ function ProductDetails() {
             </p>
 
             {/* Certifications */}
-            <h4>Key Certifications</h4>
+            <h4>Key Certificationss</h4>
 
             <div className="product-details__certifications">
-              <div className="cert">ISO999112200</div>
-              <div className="cert">ISO999112200</div>
-              <div className="cert">ISO999112200</div>
-              <div className="cert">ISO999112200</div>
+              {certifications.map((cert, index) => (
+                <div className="cert" key={index}>
+                  <img src={cert.image} alt={cert.number} />
+                  <span>{cert.number}</span>
+                </div>
+              ))}
             </div>
 
             {/* Specs */}
@@ -115,7 +140,6 @@ function ProductDetails() {
                 <strong>1/2”NPT</strong>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -125,20 +149,17 @@ function ProductDetails() {
           <h2>PRODUCT BROCHURE AND SERVICE CENTER</h2>
 
           <div className="product-details__actions">
-
             <button>PRODUCT BROCHURE</button>
 
             <button>GET A QUOTE</button>
 
             <button>GET CONNECT WITH US</button>
-
           </div>
         </div>
 
         {/* Tabs */}
 
         <div className="product-details__tabs">
-
           <div className="tabs">
             <span className="active">Technical Specification</span>
             <span>Application</span>
@@ -174,11 +195,9 @@ function ProductDetails() {
                 <td>Nominal Diameter</td>
                 <td>DN15 - DN50</td>
               </tr>
-
             </tbody>
           </table>
         </div>
-
       </div>
     </section>
   );

@@ -1,17 +1,16 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
-import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
-import markerIcon from "leaflet/dist/images/marker-icon.png";
-import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import { ContactForm } from "./ContactForm";
 import "./contact.css";
+import locationIconUrl from "../../assets/Location.png";
 
-const saibabaColonyLocation: [number, number] = [11.0168, 76.9446];
+const saibabaColonyLocation: [number, number] = [11.151139078080206, 77.04231435376536];
 
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: markerIcon2x,
-  iconUrl: markerIcon,
-  shadowUrl: markerShadow,
+const customIcon = L.icon({
+  iconUrl: locationIconUrl,
+  iconSize: [75, 75], 
+  iconAnchor: [12, 41], 
+  popupAnchor: [1, -34], 
 });
 
 function ContactPage() {
@@ -55,8 +54,7 @@ function ContactPage() {
               <div>
                 <h3>Feedback & Suggestion</h3>
                 <p>
-                  Our support team is available around the clock to address any
-                  concerns or queries you may have.
+                  We welcome your feedback and suggestions our team is here for you anytime.
                 </p>
               </div>
             </div>
@@ -77,8 +75,18 @@ function ContactPage() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={saibabaColonyLocation}>
-            <Popup>Saibaba Colony, Coimbatore, Tamil Nadu, India</Popup>
+          <Marker position={saibabaColonyLocation} icon={customIcon}>
+            <Popup>
+              Saibaba Colony, Coimbatore, Tamil Nadu, India
+              <br />
+              <a
+                href={`https://www.google.com/maps/dir/?api=1&destination=${saibabaColonyLocation[0]},${saibabaColonyLocation[1]}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get Directions
+              </a>
+            </Popup>
           </Marker>
         </MapContainer>
       </div>

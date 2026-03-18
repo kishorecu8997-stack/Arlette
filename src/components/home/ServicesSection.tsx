@@ -33,7 +33,7 @@ function ServicesSection() {
 
             <div className="services-metrics">
               <div>
-                <p className="services-metric-value">= 1.2%</p>
+                <p className="services-metric-value"> 1.2%</p>
                 <p className="services-metric-label">Allowed deviation</p>
               </div>
               <div>

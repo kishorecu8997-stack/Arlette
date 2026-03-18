@@ -10,16 +10,22 @@ import p4 from"../assets/Rectangle 63.png";
 
 //manifacture
 
-import m1 from "../assets/m1.jfif";
-import m2 from "../assets/m2.jfif";
-import m3 from "../assets/m3.jfif";
-import m4 from "../assets/m4.jfif";
+// import m1 from "../assets/m1.jfif";
+// import m2 from "../assets/m2.jfif";
+// import m3 from "../assets/m3.jfif";
+// import m4 from "../assets/m4.jfif";
+
+
+import m1 from "../assets/Manufacturing1.jpg";
+import m2 from"../assets/Manufacturing2.jfif";
+import m3 from"../assets/Manufacturing3.png";
+import m4 from"../assets/Manufacturing4.jfif";
 
 //infra
 import i1 from "../assets/i1.png";
 import i2 from "../assets/i2.png";
-// import i3 from "../assets/i3.png";
-// import i4 from "../assets/i4.png";          
+import i3 from"../assets/infra3.jfif"
+import i4 from"../assets/infra4.png";          
 
    
 
@@ -50,6 +56,6 @@ export const products: Product[] = [
     slug: 'infrastructure-project',
     description,
     price: 89.99,
-    images: [i1, i2, i1, i2],
+    images: [i1, i2, i3, i4],
   },
 ]

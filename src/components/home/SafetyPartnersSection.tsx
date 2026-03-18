@@ -190,13 +190,15 @@ function SafetyPartnersSection() {
         <div className="safetyp-testimonial-grid">
           <article className="safetyp-testimonial small">
             <img src={personLeft} alt="Abraham Jhony" />
-            <h4>Abraham Jhony</h4>
-            <p>Site Engineer</p>
+            <div className="testimonial-content">
+              <h4>Abraham Jhony</h4>
+              <p>Site Engineer</p>
+            </div>
           </article>
 
           <article className="safetyp-testimonial featured">
             <img src={personCenter} alt="Alex Mortis" />
-            <div>
+            <div className="testimonial-content">
               <h4>Alex Mortis</h4>
               <p>Operation Engineer</p>
               <blockquote>
@@ -210,8 +212,10 @@ function SafetyPartnersSection() {
 
           <article className="safetyp-testimonial small">
             <img src={personRight} alt="Jonathan Roy" />
-            <h4>Jonathan Roy</h4>
-            <p>Owner USV</p>
+            <div className="testimonial-content">
+              <h4>Jonathan Roy</h4>
+              <p>Owner USV</p>
+            </div>
           </article>
         </div>
       </div>
