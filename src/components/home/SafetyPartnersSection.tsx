@@ -6,6 +6,12 @@ import TM from "../../assets/Company (1).png";
 import bosch from "../../assets/Company (2).png";
 import wipro from "../../assets/Company (3).png";
 
+//hovercase
+import ActiveTata from "../../assets/l1.png"
+import ActiveTM from "../../assets/Tech_Mahindra_New_Logo.svg 1.png" 
+import ActiveBosch from "../../assets/bosch-logo-png_seeklogo-298084 1.png"
+import ActiveWipro from "../../assets/wipro-logo 1.png"
+
 import creativeIdeasImage from "../../assets/image 21.png";
 import security from "../../assets/Mask group (5).png";
 import suppourt from "../../assets/Mask group (6).png";
@@ -14,9 +20,7 @@ import ratingIcon from "../../assets/Mask group.png";
 import teamIcon from "../../assets/Mask group (3).png";
 import clientsIcon from "../../assets/Mask group (4).png";
 
-import personLeft from "../../assets/Rectangle 30.png";
-import personCenter from "../../assets/Rectangle 29.png";
-import personRight from "../../assets/Rectangle 31.png";
+import { testimonials } from "../../data/testimonials";
 
 const featureCards = [
   {
@@ -54,6 +58,7 @@ function SafetyPartnersSection() {
   const [animatedPercentages, setAnimatedPercentages] = useState<number[]>(
     progressItems.map(() => 0),
   );
+  const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0);
 
   useEffect(() => {
     const target = barSectionRef.current;
@@ -103,6 +108,22 @@ function SafetyPartnersSection() {
 
     return () => cancelAnimationFrame(rafId);
   }, [isBarsInView]);
+
+  // Auto-slide testimonials every 7 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveTestimonialIndex((prev) => (prev + 1) % testimonials.length);
+    }, 7000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const getVisibleTestimonials = () => {
+    const total = testimonials.length;
+    const prev = (activeTestimonialIndex - 1 + total) % total;
+    const curr = activeTestimonialIndex;
+    const next = (activeTestimonialIndex + 1) % total;
+    return [testimonials[prev], testimonials[curr], testimonials[next]];
+  };
 
   return (
     <section className="safetyp-section home-container">
@@ -175,48 +196,59 @@ function SafetyPartnersSection() {
         </h3>
 
         <div className="safetyp-logos-grid reveal reveal-delay-200">
-          <img src={tata} alt="Partner 1" />
-          <img src={TM} alt="Partner 2" />
-          <img src={bosch} alt="Partner 3" />
-          <img src={wipro} alt="Partner 4" />
+          <img 
+            src={tata} 
+            alt="Partner 1" 
+            onMouseEnter={(e) => (e.currentTarget.src = ActiveTata)}
+            onMouseLeave={(e) => (e.currentTarget.src = tata)}
+          />
+          <img src={TM} alt="Partner 2" 
+          onMouseEnter={(e) => (e.currentTarget.src = ActiveTM)}
+          onMouseLeave={(e) => (e.currentTarget.src = TM)}
+          />
+          <img src={bosch} alt="Partner 3" 
+          onMouseEnter={(e) => (e.currentTarget.src = ActiveBosch)}
+          onMouseLeave={(e) => (e.currentTarget.src = bosch)}
+          />
+          <img src={wipro} alt="Partner 4" 
+          onMouseEnter={(e) => (e.currentTarget.src = ActiveWipro)}
+          onMouseLeave={(e) => (e.currentTarget.src = wipro)}
+          />
         </div>
       </div>
 
-      <div className="safetyp-testimonials">
-        <p className="safetyp-testimonials-kicker reveal">Testimonials</p>
+      <div className="safetyp-testimonials" style={{ width: "80%", margin: "4rem auto", textAlign: "center" }}>
+        {/* <p className="safetyp-testimonials-kicker reveal">Testimonials</p> */}
 
         <h3 className="reveal reveal-delay-100">What Our Partners Say</h3>
 
         <div className="safetyp-testimonial-grid">
-          <article className="safetyp-testimonial small hover-card reveal reveal-delay-100">
-            <img src={personLeft} alt="Abraham Jhony" />
-            <div className="testimonial-content">
-              <h4>Abraham Jhony</h4>
-              <p>Site Engineer</p>
-            </div>
-          </article>
-
-          <article className="safetyp-testimonial featured hover-card reveal reveal-delay-200">
-            <img src={personCenter} alt="Alex Mortis" />
-            <div className="testimonial-content">
-              <h4>Alex Mortis</h4>
-              <p>Operation Engineer</p>
-              <blockquote>
-                "Batch variation used to slow us down. Since partnering with
-                Conada, output stability has improved dramatically-run after
-                run."
-              </blockquote>
-              <span>Rated 4.5/5 </span>
-            </div>
-          </article>
-
-          <article className="safetyp-testimonial small hover-card reveal reveal-delay-300">
-            <img src={personRight} alt="Jonathan Roy" />
-            <div className="testimonial-content">
-              <h4>Jonathan Roy</h4>
-              <p>Owner USV</p>
-            </div>
-          </article>
+          {getVisibleTestimonials().map((testimonial, idx) => {
+            const isCenter = idx === 1;
+            return (
+              <article
+                key={`${testimonial.id}-${activeTestimonialIndex}`}
+                className={`safetyp-testimonial hover-card page-transition reveal reveal-delay-${(idx + 1) * 100} ${isCenter ? 'featured' : 'small'}`}
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  if (idx === 0) setActiveTestimonialIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+                  if (idx === 2) setActiveTestimonialIndex((prev) => (prev + 1) % testimonials.length);
+                }}
+              >
+                <img src={testimonial.image} alt={testimonial.name} />
+                <div className="testimonial-content">
+                  <h4>{testimonial.name}</h4>
+                  <p>{testimonial.role}</p>
+                  {isCenter && (
+                    <>
+                      <blockquote>"{testimonial.quote}"</blockquote>
+                      <span>Rated {testimonial.rating}</span>
+                    </>
+                  )}
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
