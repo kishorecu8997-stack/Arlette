@@ -1,4 +1,4 @@
-import heroImage from "../../assets/Rectangle 5 (1).png";
+import heroImage from "../../assets/Main.jpeg";
 import group76Image from "../../assets/Group 76.png";
 import group71Image from "../../assets/Rectangle 6.png";
 import group57Image from "../../assets/Group 57.png";
@@ -26,10 +26,9 @@ function HeroSection() {
 
         <div className="hero-bottom-right">
           <p>
-            // We provide reliable, scalable solutions that empower organizations to improve efficiency,
-            make smarter decisions, and drive sustainable growth.
+            // Arlett Engineering delivers precision manufacturing and innovative engineering solutions, ensuring reliable performance, superior quality, and efficiency for modern industrial applications.
           </p>
-          <button type="button" className="hero-connect-btn">
+          <button type="button" style={{ borderRadius: '6px' }}>
             <img src={group76Image} alt="Connect Us" />
           </button>
         </div>

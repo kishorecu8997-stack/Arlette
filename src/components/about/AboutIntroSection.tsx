@@ -6,7 +6,7 @@ function AboutIntroSection() {
     <section className="aboutp-intro">
       <div className="aboutp-intro__content">
         <p className="aboutp-kicker">/ About</p>
-        <h1>Design and technology combined to help brands connect and stand out.</h1>
+        <h1>Engineering excellence built on precision, innovation, and trust.</h1>
         <p>
           GK industries,an ISO 9001:2015 certified company, boasts a rich history of 50 years in manufacturing and exporting diverse sheet metal components. Our expertise lies in crafting customized designs that cater to our customers’ specific applications. Established in 1971, our journey began with job working for renowned textile and engineering firms. It’s a matter of great pride that we’ve consistently received accolades for delivering high-quality products on time. Welcome to GK Industries.
         </p>
