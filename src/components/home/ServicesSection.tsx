@@ -20,15 +20,15 @@ function ServicesSection() {
   return (
     <section className="services-section home-container">
       <div className="services-wrap">
-        <img src={mainImage} alt="Services" className="services-left-image" />
+        <img src={mainImage} alt="Services" className="services-left-image reveal" />
 
         <div>
-          <p className="services-label">Services</p>
-          <p className="services-copy">
+          <p className="services-label reveal">Services</p>
+          <p className="services-copy reveal">
             Standardized workflows eliminate variation, delivering uniform quality from first batch to last.
           </p>
 
-          <div className="services-metrics-block">
+          <div className="services-metrics-block reveal reveal-delay-100">
             <img src={miniImage} alt="Service preview" className="services-mini-image" />
 
             <div className="services-metrics">
@@ -47,11 +47,11 @@ function ServicesSection() {
             </div>
           </div>
 
-          <h4 className="services-heading">Where Consistency Matter The Most</h4>
+          <h4 className="services-heading reveal">Where Consistency Matter The Most</h4>
 
           <div className="services-cards-grid">
-            {serviceCards.map((card) => (
-              <article key={card.title} className="services-card">
+            {serviceCards.map((card, index) => (
+              <article key={card.title} className={`services-card hover-card reveal reveal-delay-${(index + 1) * 100}`}>
                 <img src={mainImage} alt={card.title} className="services-card-bg" />
                 <div className="services-card-overlay">
                   <h5>{card.title}</h5>

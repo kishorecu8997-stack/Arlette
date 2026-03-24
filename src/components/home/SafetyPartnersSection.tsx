@@ -151,8 +151,8 @@ function SafetyPartnersSection() {
         </div>
 
         <div className="safetyp-feature-cards">
-          {featureCards.map((card) => (
-           <article key={card.title} className={`safetyp-feature-card ${card.theme}`}>
+          {featureCards.map((card, index) => (
+           <article key={card.title} className={`safetyp-feature-card ${card.theme} hover-card reveal reveal-delay-${(index + 1) * 100}`}>
   <img src={card.icon} alt={card.title} className="safetyp-feature-icon" />
 
   <div className="safetyp-feature-text">
@@ -168,13 +168,13 @@ function SafetyPartnersSection() {
       </div>
 
       <div className="safetyp-partners">
-        <p className="safetyp-partners-kicker">Our Trusted Partner</p>
-        <h3>
+        <p className="safetyp-partners-kicker reveal">Our Trusted Partner</p>
+        <h3 className="reveal reveal-delay-100">
           We work with chosen partners to ensure stability and control in
           production.
         </h3>
 
-        <div className="safetyp-logos-grid">
+        <div className="safetyp-logos-grid reveal reveal-delay-200">
           <img src={tata} alt="Partner 1" />
           <img src={TM} alt="Partner 2" />
           <img src={bosch} alt="Partner 3" />
@@ -183,12 +183,12 @@ function SafetyPartnersSection() {
       </div>
 
       <div className="safetyp-testimonials">
-        <p className="safetyp-testimonials-kicker">Testimonials</p>
+        <p className="safetyp-testimonials-kicker reveal">Testimonials</p>
 
-        <h3>What Our Partners Say</h3>
+        <h3 className="reveal reveal-delay-100">What Our Partners Say</h3>
 
         <div className="safetyp-testimonial-grid">
-          <article className="safetyp-testimonial small">
+          <article className="safetyp-testimonial small hover-card reveal reveal-delay-100">
             <img src={personLeft} alt="Abraham Jhony" />
             <div className="testimonial-content">
               <h4>Abraham Jhony</h4>
@@ -196,7 +196,7 @@ function SafetyPartnersSection() {
             </div>
           </article>
 
-          <article className="safetyp-testimonial featured">
+          <article className="safetyp-testimonial featured hover-card reveal reveal-delay-200">
             <img src={personCenter} alt="Alex Mortis" />
             <div className="testimonial-content">
               <h4>Alex Mortis</h4>
@@ -210,7 +210,7 @@ function SafetyPartnersSection() {
             </div>
           </article>
 
-          <article className="safetyp-testimonial small">
+          <article className="safetyp-testimonial small hover-card reveal reveal-delay-300">
             <img src={personRight} alt="Jonathan Roy" />
             <div className="testimonial-content">
               <h4>Jonathan Roy</h4>

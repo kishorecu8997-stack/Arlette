@@ -1,21 +1,51 @@
-@keyframes text-fade-up {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 14px, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
+/* Global Smoothness */
+a, button, input, textarea, select {
+  transition: all 0.2s ease-in-out;
 }
 
-:where(h1, h2, h3, h4, h5, h6, p, li, a, label, blockquote, button) {
-  animation: text-fade-up 0.72s cubic-bezier(0.22, 1, 0.36, 1) both;
+/* Button Interactions */
+button:hover, .btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+button:active, .btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  :where(h1, h2, h3, h4, h5, h6, p, li, a, label, blockquote, button) {
-    animation: none;
-  }
+/* Card Hover Effects */
+.hover-card {
+  transition: all 0.3s ease-in-out !important;
 }
+.hover-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Form & Input UX */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.15);
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Delays for lists */
+.reveal-delay-100 { transition-delay: 100ms; }
+.reveal-delay-200 { transition-delay: 200ms; }
+.reveal-delay-300 { transition-delay: 300ms; }

@@ -9,12 +9,12 @@ function AboutSection() {
   return (
     <section className="about-section home-container">
       <div className="about-grid">
-        <div className="about-left">
+        <div className="about-left reveal">
           <img src={leftImage} alt="About left" className="about-left-image " />
           <img src={group63Image} alt="26 years of experience" className="about-badge-image rotate-animation" />
         </div>
 
-        <div className="about-content">
+        <div className="about-content reveal reveal-delay-100">
           <p className="about-content-label">About</p>
           <h2>Engineering excellence built on precision, innovation, and trust.</h2>
           <p>
@@ -32,21 +32,21 @@ function AboutSection() {
           </div>
         </div>
 
-        <img src={workerImage} alt="About right" className="about-right" />
+        <img src={workerImage} alt="About right" className="about-right reveal reveal-delay-200" />
       </div>
 
-      <div className="about-stats">
+      <div className="about-stats reveal">
         <p className="about-stats-copy">
           Sustainable, visionary steel solutions that serve customers and communities, people and
           planet.Sustainable, visionary steel solutions that
         </p>
 
-        <div>
+        <div className="reveal reveal-delay-100">
           <p className="about-stat-value">100%</p>
           <p className="about-stat-desc">Our products are 100% infinitely recyclable without quality degradation</p>
         </div>
 
-        <div>
+        <div className="reveal reveal-delay-200">
           <p className="about-stat-value">90%</p>
           <p className="about-stat-desc">Steel contains up to 90% recycled steel content</p>
         </div>

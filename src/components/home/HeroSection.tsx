@@ -12,7 +12,7 @@ function HeroSection() {
         <div className="hero-overlay" />
         
 
-        <div className="hero-center">
+        <div className="hero-center reveal">
           <div className="hero-kicker-row">
             <span>Innovate</span>
             <img src={group57Image} alt="separator" />
@@ -24,7 +24,7 @@ function HeroSection() {
           <h1 className="hero-title">Everything You Need To Get Started In One Place</h1>
         </div>
 
-        <div className="hero-bottom-right">
+        <div className="hero-bottom-right reveal reveal-delay-200">
           <p>
             // Arlett Engineering delivers precision manufacturing and innovative engineering solutions, ensuring reliable performance, superior quality, and efficiency for modern industrial applications.
           </p>
@@ -36,7 +36,7 @@ function HeroSection() {
 
       <div className="hero-gray-cut" />
 
-      <div className="hero-card">
+      <div className="hero-card hover-card reveal reveal-delay-300">
         <img src={group71Image} alt="Contact Here" className="hero-card-image" />
         <div className="hero-card-content">
           <h3>
