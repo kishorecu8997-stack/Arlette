@@ -15,6 +15,8 @@ function ProductDetails() {
   );
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     if (product && product.images.length > 1) {
       const interval = setInterval(() => {
         setCurrentImageIndex(
@@ -59,8 +61,7 @@ function ProductDetails() {
   ];
 
   return (
-    <section className="product-details">
-      <div className="product-details__container">
+    <section className="product-details page-transition" style={{ maxWidth: "1440px", width: "100%", margin: "0 auto", padding: "2rem 5%" }}>
         <p className="product-details__breadcrumb">
           / Products / {product.name}
         </p>
@@ -198,9 +199,9 @@ function ProductDetails() {
             </tbody>
           </table>
         </div>
-      </div>
+      
     </section>
-  );
+  )       
 }
 
 export default ProductDetails;

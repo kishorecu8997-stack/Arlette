@@ -49,3 +49,19 @@ input:focus, textarea:focus, select:focus {
 .reveal-delay-100 { transition-delay: 100ms; }
 .reveal-delay-200 { transition-delay: 200ms; }
 .reveal-delay-300 { transition-delay: 300ms; }
+
+/* Page & Image Transitions */
+.page-transition {
+  animation: fadeInPage 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -9,6 +9,8 @@ import "../styles/animations.css";
 
 function About() {
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -29,7 +31,7 @@ function About() {
   }, []);
 
   return (
-    <div className="aboutp-page">
+    <div className="aboutp-page page-transition">
       <div className="aboutp-container">
         <AboutIntroSection />
         <AboutImpactSection />

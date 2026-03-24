@@ -10,6 +10,8 @@ import "../styles/animations.css";
 
 function Home() {
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -30,12 +32,12 @@ function Home() {
   }, []);
 
   return (
-    <div className="home-page pb-32">
+    <div className="home-page pb-32 page-transition">
       <HeroSection />
       <AboutSection />
       <StatsSection />
       <ServicesSection />
-      <ServicesSectionTwo />
+      {/* <ServicesSectionTwo /> */}
       <SafetyPartnersSection />
     </div>
   );

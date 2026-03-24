@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { products } from "../../data/products";
 import "./product.css";
 import { Link } from "react-router-dom";
@@ -22,8 +23,12 @@ const specialties = [
 ];
 
 function ProductPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <section className="product-page">
+    <section className="product-page page-transition">
       <div className="product-page__container">
         <p className="product-page__crumb">/ Products</p>
         <div className="product-page__content">

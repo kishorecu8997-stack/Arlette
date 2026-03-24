@@ -161,7 +161,7 @@
 }
 
 .about-grid {
-  margin-top: 135px;
+  margin-top: 50px;
   display: grid;
   grid-template-columns: 300px 1fr 260px;
   gap: 44px;
@@ -274,9 +274,9 @@
 }
 
 .about-stat-value {
-  font-size: clamp(52px, 4vw, 90px);
+  font-size: clamp(52px, 4vw, 45px);
   line-height: 1;
-  font-weight: 500;
+  font-weight: 450;
   color: #111827;
 }
 
