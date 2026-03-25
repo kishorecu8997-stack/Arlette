@@ -99,7 +99,10 @@ ${form.message}`,
             from_name: form.name,
             from_email: form.email,
             phone_number: form.phone,
-            message: form.message,
+            message: `Name: ${form.name}
+            Email: ${form.email}
+            Phone: ${form.phone}
+            Message:${form.message}`,
           },
           { publicKey: emailJsConfig.publicKey },
         );

@@ -11,7 +11,7 @@ const companyLinks = [
 ];
 const quickLinks = [
   { label: "Case Study", to: "/about" },
-  { label: "Industry We Serve", to: "/about" },
+  { label: "Industry We Serve", to: "/products" },
   { label: "How We Work", to: "/about" },
   { label: "Support", to: "/contact" },
 ];
