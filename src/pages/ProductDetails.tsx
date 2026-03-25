@@ -1,13 +1,17 @@
 import { useMemo, useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import certificate from "../assets/certificatelogo.png";
 
 import { products } from "../data/products";
+import { Popup } from "../components/Popup";
+import { ContactForm } from "../components/contact/ContactForm";
 import "./ProductDetails.css";
 
 function ProductDetails() {
   const { slug } = useParams();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const navigate = useNavigate();
 
   const product = useMemo(
     () => products.find((item) => item.slug === slug),
@@ -61,6 +65,7 @@ function ProductDetails() {
   ];
 
   return (
+    <>
     <section className="product-details page-transition" style={{ maxWidth: "1440px", width: "100%", margin: "0 auto", padding: "2rem 5%" }}>
         <p className="product-details__breadcrumb">
           / Products / {product.name}
@@ -152,9 +157,9 @@ function ProductDetails() {
           <div className="product-details__actions">
             <button>PRODUCT BROCHURE</button>
 
-            <button>GET A QUOTE</button>
+            <button onClick={() => setIsPopupOpen(true)}>GET A QUOTE</button>
 
-            <button>GET CONNECT WITH US</button>
+            <button onClick={() => navigate("/contact")}>GET CONNECT WITH US</button>
           </div>
         </div>
 
@@ -201,6 +206,10 @@ function ProductDetails() {
         </div>
       
     </section>
+      <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)}>
+        <ContactForm />
+      </Popup>
+    </>
   )       
 }
 

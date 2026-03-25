@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import arletteLogo from "../assets/Group 1.png";
 import { products } from "../data/products";
@@ -11,6 +11,7 @@ type NavbarProps = {
 
 function Navbar({ onEnquireClick }: NavbarProps) {
   const [isMegaMenuVisible, setMegaMenuVisible] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const navClassName = ({ isActive }: { isActive: boolean }) =>
     isActive ? "border-b-2 border-black pb-1" : "pb-1 hover:border-b-2 hover:border-gray-300";
@@ -18,6 +19,22 @@ function Navbar({ onEnquireClick }: NavbarProps) {
   const handleBecomeCustomerClick = () => {
     setMegaMenuVisible(false);
     onEnquireClick();
+  };
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setMegaMenuVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setMegaMenuVisible(false);
+    }, 150);
+  };
+
+  const handleProductClick = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setMegaMenuVisible(false);
   };
 
   return (
@@ -40,16 +57,17 @@ function Navbar({ onEnquireClick }: NavbarProps) {
           </NavLink>
           <div
             className="nav-item-container"
-            onMouseEnter={() => setMegaMenuVisible(true)}
-            onMouseLeave={() => setMegaMenuVisible(false)}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
-            <NavLink to="/products" className={navClassName}>
+            <NavLink to="/products" className={navClassName} onClick={handleProductClick}>
               Product
             </NavLink>
             {isMegaMenuVisible && (
               <MegaMenu
                 products={products}
                 onBecomeCustomerClick={handleBecomeCustomerClick}
+                onClose={handleProductClick}
               />
             )}
           </div>
@@ -70,4 +88,3 @@ function Navbar({ onEnquireClick }: NavbarProps) {
 }
 
 export default Navbar;
-
