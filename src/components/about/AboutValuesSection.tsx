@@ -15,7 +15,8 @@ const values = [
   },
   {
     title: "BE COLLABORATIVE",
-    description: "We do our best with a team of integrity, with trust and honesty",
+    description:
+      "We do our best with a team of integrity, with trust and honesty",
     image: collaborative,
   },
 ];
@@ -24,7 +25,10 @@ function AboutValuesSection() {
   return (
     <section className="aboutp-values">
       <h3 className="reveal">Core Values</h3>
-      <p className="aboutp-values__lead reveal reveal-delay-100">
+      <p
+        style={{ fontSize: "clamp(15px, 1.08vw, 20px)", marginTop: "10px" }}
+        className="reveal reveal-delay-100"
+      >
         At the heart of our operations are values that define how we work,
         deliver, and grow. These principles guide our people, shape our
         processes, and ensure we consistently provide reliable industrial
@@ -33,7 +37,10 @@ function AboutValuesSection() {
 
       <div className="aboutp-values__grid">
         {values.map((value, index) => (
-          <article key={value.title} className={`aboutp-values__item hover-card reveal reveal-delay-${(index + 1) * 100}`}>
+          <article
+            key={value.title}
+            className={`aboutp-values__item hover-card reveal reveal-delay-${(index + 1) * 100}`}
+          >
             <div className="aboutp-values__icon">
               <img
                 src={value.image}

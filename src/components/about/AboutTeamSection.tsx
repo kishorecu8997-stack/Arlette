@@ -14,18 +14,23 @@ const members = [
 
 function AboutTeamSection() {
   return (
-    <section className="aboutp-team">
+    <section className="aboutp-team ">
       <h3>Our Team</h3>
-      <p className="aboutp-team__lead">
-        Our team is the backbone of our industrial operations. We believe that strong collaboration, mutual respect,
-         and shared responsibility drive safe, efficient, and high-quality results. By working together with clarity and
-       purpose,we ensure every project is delivered with precision and reliability.ur team drives all-metal operations 
-       and quality growth with precision and adaptability.
+      <p className="aboutp-team__description">
+        Our team is the backbone of our industrial operations. We believe that
+        strong collaboration, mutual respect, and shared responsibility drive
+        safe, efficient, and high-quality results. By working together with
+        clarity and purpose, we ensure every project is delivered with precision
+        and reliability. Our team drives all-metal operations and quality growth
+        with precision and adaptability.
       </p>
 
       <div className="aboutp-team__grid">
         {members.map((member) => (
-          <article key={`${member.name}-${member.role}`} className="aboutp-team__card">
+          <article
+            key={`${member.name}-${member.role}`}
+            className="aboutp-team__card"
+          >
             <img src={member.image} alt={member.name} />
             <div className="aboutp-team__meta">
               <h4>{member.name}</h4>

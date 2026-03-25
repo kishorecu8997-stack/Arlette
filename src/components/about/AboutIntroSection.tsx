@@ -1,4 +1,4 @@
-import About from "../../assets/about1st.png";
+import About from "../../assets/img333.jpg (1).jpeg";
 import Small from "../../assets/about2.png";
 
 function AboutIntroSection() {
@@ -6,12 +6,22 @@ function AboutIntroSection() {
     <section className="aboutp-intro">
       <div className="aboutp-intro__content">
         <p className="aboutp-kicker">/ About</p>
-        <h1>Engineering excellence built on precision, innovation, and trust.</h1>
+        <h1>
+          Engineering excellence built on precision, innovation, and trust.
+        </h1>
         <p>
-          GK industries,an ISO 9001:2015 certified company, boasts a rich history of 50 years in manufacturing and exporting diverse sheet metal components. Our expertise lies in crafting customized designs that cater to our customers’ specific applications. Established in 1971, our journey began with job working for renowned textile and engineering firms. It’s a matter of great pride that we’ve consistently received accolades for delivering high-quality products on time. Welcome to GK Industries.
+          At Arlett Engineering, we specialize in delivering high-quality
+          engineering and manufacturing solutions designed to power modern
+          industries. Based in Coimbatore, we combine technical expertise with a
+          commitment to precision to produce dependable machinery and engineered
+          products that meet evolving industrial demands.{" "}
         </p>
         <p>
-          Your Gateway to Outstanding Metal Fabrication Services. GK Industries is your go-to destination for top-tier metal fabrication services and job works in Coimbatore, Tamil Nadu. Our unwavering commitment to excellence is evident in every project we undertake.
+          From concept to execution, our approach is driven by innovation,
+          efficiency, and uncompromising quality standards. Whether it’s
+          manufacturing components or developing advanced equipment, Arlett
+          Engineering stands as a trusted partner for businesses seeking
+          performance-driven engineering.
         </p>
         <div className="aboutp-social">
           <span>Follow Us On</span>

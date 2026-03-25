@@ -9,7 +9,7 @@ import wipro from "../../assets/Company (3).png";
 //hovercase
 import ActiveTata from "../../assets/l1.png"
 import ActiveTM from "../../assets/Tech_Mahindra_New_Logo.svg 1.png" 
-import ActiveBosch from "../../assets/bosch-logo-png_seeklogo-298084 1.png"
+import ActiveBosch from "../../assets/bosch (1).png"
 import ActiveWipro from "../../assets/wipro-logo 1.png"
 
 import creativeIdeasImage from "../../assets/image 21.png";
@@ -27,23 +27,26 @@ const featureCards = [
     title: "Creative Ideas",
     theme: "theme-white",
     icon: creativeIdeasImage,
+    description:"Innovation starts with an idea. We turn creative concepts into efficient, reliable, and scalable manufacturing solutions."
   },
   {
     title: "Super Safety",
     theme: "theme-blue-light",
     icon: security,
+    description:"Safety is our priority. We ensure secure, compliant, and risk-free operations in every project we handle hazards."
   },
   {
     title: "24/7 Support",
     theme: "theme-blue-dark",
     icon: suppourt,
+    description:"Our support team is available around the clock to address any concerns or queries you may have."
   },
 ];
 
 const progressItems = [
   { label: "Working Ability", value: 95 },
   { label: "Machine Power", value: 88 },
-  { label: "Time Management", value: 80 },
+  { label: "Time Management", value: 100 },
 ];
 
 const statsItems = [
@@ -179,8 +182,7 @@ function SafetyPartnersSection() {
   <div className="safetyp-feature-text">
     <h5>{card.title}</h5>
     <p>
-      Innovation starts with an idea. We turn creative concepts into efficient, reliable, and scalable
-      manufacturing solutions.
+      {card.description}
     </p>
   </div>
 </article>
@@ -199,18 +201,22 @@ function SafetyPartnersSection() {
           <img 
             src={tata} 
             alt="Partner 1" 
+            style={{ objectFit: "contain", width: "100%", height: "80px" }}
             onMouseEnter={(e) => (e.currentTarget.src = ActiveTata)}
             onMouseLeave={(e) => (e.currentTarget.src = tata)}
           />
           <img src={TM} alt="Partner 2" 
+          style={{ objectFit: "contain", width: "100%", height: "80px" }}
           onMouseEnter={(e) => (e.currentTarget.src = ActiveTM)}
           onMouseLeave={(e) => (e.currentTarget.src = TM)}
           />
           <img src={bosch} alt="Partner 3" 
+          style={{ objectFit: "contain", width: "100%", height: "80px" }}
           onMouseEnter={(e) => (e.currentTarget.src = ActiveBosch)}
           onMouseLeave={(e) => (e.currentTarget.src = bosch)}
           />
           <img src={wipro} alt="Partner 4" 
+          style={{ objectFit: "contain", width: "100%", height: "80px" }}
           onMouseEnter={(e) => (e.currentTarget.src = ActiveWipro)}
           onMouseLeave={(e) => (e.currentTarget.src = wipro)}
           />

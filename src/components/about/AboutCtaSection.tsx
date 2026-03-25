@@ -13,7 +13,7 @@ function AboutCtaSection() {
           Browse our products and services to find dependable industrial solutions. We combine quality,
           reliable equipment and engineered performance.
         </p>
-        <a href="#">View Our Products and Services</a>
+        <a href="/products">View Our Products and Services</a>
       </div>
     </section>
   );

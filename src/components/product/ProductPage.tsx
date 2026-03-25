@@ -34,8 +34,8 @@ function ProductPage() {
         <div className="product-page__content">
           <aside className="product-page__sidebar">
             <div className="product-filter">
-              <h3>Filter</h3>
-              <p>Refine Your View By Sector</p>
+              <h3>Explore Sectors</h3>
+              <p>Discover solution across key industries</p>
 
               <h4>Industry Verticals</h4>
               <ul>
@@ -47,7 +47,7 @@ function ProductPage() {
                 ))}
               </ul>
 
-              <h4>Industry Verticals</h4>
+              <h4>Services</h4>
               <ul>
                 {secondaryFilters.map((item) => (
                   <li key={item}>

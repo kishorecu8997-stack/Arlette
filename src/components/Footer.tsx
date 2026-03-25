@@ -86,9 +86,9 @@ function Footer() {
           <div className="arlette-footer__contact">
             <p className="arlette-footer__label">Call Us</p>
             <p className="arlette-footer__value">
-              +91 99884 30122
-              <span className="arlette-footer__separator">&#9651;</span>
-              +91 99884 30233
+              +91 80451  67532
+              {/* <span className="arlette-footer__separator">&#9651;</span>
+              +91 99884 30233 */}
             </p>
           </div>
 

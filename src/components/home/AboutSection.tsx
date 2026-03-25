@@ -24,8 +24,7 @@ function AboutSection() {
           </p>
           <p>
             From concept to execution, our approach is driven by innovation, efficiency, and uncompromising quality standards. Whether it’s manufacturing components 
-            or developing advanced equipment, 
-            Arlett Engineering stands as a trusted partner for businesses seeking performance-driven engineering
+            or developing advanced equipment, Arlett Engineering stands as a trusted partner for businesses seeking performance-driven engineering.
           </p>
           <div className="about-cta">
             <button type="button" onClick={() => navigate('/about')}>Read More</button>

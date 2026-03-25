@@ -28,15 +28,15 @@ function ContactPage() {
            <div className="contact-page__contact-list">
   <div className="contact-page__contact-left">
     <p>support@arlette.com</p>
-    <p>+91 99884 30122</p>
+    <p>+91 80451 67532</p>
     <p>+91 99884 30233</p>
   </div>
 
   <div className="contact-page__contact-right">
     <h3>Address</h3>
     <p>
-      John Doe, 123 Fake Street,<br />
-      Somewhere, CA 90210, USA.
+      1/527, Pallathottam,Kunathurpudur, Kunnathur,<br />
+     Coimbatore, Tamil Nadu, 641107
     </p>
   </div>
 </div>
