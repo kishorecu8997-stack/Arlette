@@ -3,7 +3,6 @@ import HeroSection from "../components/home/HeroSection";
 import AboutSection from "../components/home/AboutSection";
 import StatsSection from "../components/home/StatsSection";
 import ServicesSection from "../components/home/ServicesSection";
-import ServicesSectionTwo from "../components/home/ServicesSectionTwo";
 import SafetyPartnersSection from "../components/home/SafetyPartnersSection";
 import "./home.css";
 import "../styles/animations.css";

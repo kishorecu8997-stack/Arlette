@@ -11,7 +11,7 @@ type NavbarProps = {
 
 function Navbar({ onEnquireClick }: NavbarProps) {
   const [isMegaMenuVisible, setMegaMenuVisible] = useState(false);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const navClassName = ({ isActive }: { isActive: boolean }) =>
     isActive ? "border-b-2 border-black pb-1" : "pb-1 hover:border-b-2 hover:border-gray-300";

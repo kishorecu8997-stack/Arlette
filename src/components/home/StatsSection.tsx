@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import heroImage from "../../assets/Rectangle 9.png";
-import gridimg from "../../assets/Rectangle 11.png";
 import { products } from "../../data/products";
 
 function StatsSection() {
