@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import AboutIntroSection from "../components/about/AboutIntroSection";
-import AboutImpactSection from "../components/about/AboutImpactSection";
+// import AboutImpactSection from "../components/about/AboutImpactSection";
 import AboutValuesSection from "../components/about/AboutValuesSection";
 import AboutTeamSection from "../components/about/AboutTeamSection";
 import AboutCtaSection from "../components/about/AboutCtaSection";
+import PrecisionLifecycle  from "../components/about/PrecisionLifecycle";
 import "../components/about/about.css";
 import "../styles/animations.css";
 
@@ -34,7 +35,8 @@ function About() {
     <div className="aboutp-page page-transition">
       <div className="aboutp-container">
         <AboutIntroSection />
-        <AboutImpactSection />
+        {/* <AboutImpactSection /> */}
+        <PrecisionLifecycle/>
         <AboutValuesSection />
         <AboutTeamSection />
         <AboutCtaSection />

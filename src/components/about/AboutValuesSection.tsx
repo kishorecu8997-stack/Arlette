@@ -23,11 +23,10 @@ const values = [
 
 function AboutValuesSection() {
   return (
-    <section className="aboutp-values">
-      <h3 className="reveal">Core Values</h3>
+    <section className="border-t-0 pt-[25px]">
+      <h3 className="reveal m-0 text-[30px] font-medium">Core Values</h3>
       <p
-        style={{ fontSize: "clamp(15px, 1.08vw, 20px)", marginTop: "10px" }}
-        className="reveal reveal-delay-100"
+        className="reveal reveal-delay-100 mt-[10px] text-[clamp(15px,1.08vw,20px)]"
       >
         At the heart of our operations are values that define how we work,
         deliver, and grow. These principles guide our people, shape our
@@ -35,21 +34,25 @@ function AboutValuesSection() {
         solutions to our clients.
       </p>
 
-      <div className="aboutp-values__grid">
+      <div className="mt-[25px] grid grid-cols-1 min-[1201px]:grid-cols-3">
         {values.map((value, index) => (
           <article
             key={value.title}
-            className={`aboutp-values__item hover-card reveal reveal-delay-${(index + 1) * 100}`}
+            className={`hover-card reveal reveal-delay-${(index + 1) * 100} px-[16px] pb-[32px] pt-[26px] text-center ${
+              index !== 0
+                ? "border-[#d8dbe3] max-[1200px]:border-t min-[1201px]:border-l"
+                : ""
+            }`}
           >
-            <div className="aboutp-values__icon">
+            <div className="mx-auto flex items-center justify-center text-[15px] text-[#6b7280]">
               <img
                 src={value.image}
                 alt={value.title}
-                className="aboutp-values__img"
+                className="h-auto w-[60px] rounded-none"
               />
             </div>
-            <h4>{value.title}</h4>
-            <p>{value.description}</p>
+            <h4 className="mb-[6px] mt-[10px] text-[16px] text-[#374151]">{value.title}</h4>
+            <p className="mx-auto max-w-[280px] text-[12px] text-[#6b7280]">{value.description}</p>
           </article>
         ))}
       </div>

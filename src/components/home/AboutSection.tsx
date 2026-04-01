@@ -37,17 +37,17 @@ function AboutSection() {
       <div className="about-stats reveal">
         <p className="about-stats-copy">
           Delivering advanced manufacturing and fabrication solutions with a strong focus on material quality, 
-          process efficiency, and high-performance engineering standards
+          process efficiency, and high-performance engineering standards.
         </p>
 
         <div className="reveal reveal-delay-100">
           <p className="about-stat-value">100%</p>
-          <p className="about-stat-desc">Our products are 100% Quality checked before dispatch</p>
+          <p className="about-stat-desc">Our products are 100% Quality checked before dispatch.</p>
         </div>
 
         <div className="reveal reveal-delay-200">
           <p className="about-stat-value">500+</p>
-          <p className="about-stat-desc">Components Manufactured with consistent quality standards</p>
+          <p className="about-stat-desc">Components Manufactured with consistent quality standards.</p>
         </div>
       </div>
     </section>
